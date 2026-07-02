@@ -1,0 +1,432 @@
+.wotm-tracking-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+}
+
+.wotm-tracking-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.wotm-form-group {
+    margin-bottom: 20px;
+}
+
+.wotm-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.wotm-form-group input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.wotm-form-group input[type="text"]:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+#wotm-track-button {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#wotm-track-button:hover:not(:disabled) {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+#wotm-track-button:active:not(:disabled),
+#wotm-track-button:focus-visible:not(:disabled) {
+    background-color: #0d6efd;
+}
+
+#wotm-track-button:disabled {
+    background-color: #0d6efd;
+    color: #fff;
+    cursor: wait;
+    transform: none;
+    opacity: 1;
+}
+
+.wotm-loading-indicator,
+.wotm-error,
+.wotm-info {
+    text-align: center;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.05em;
+}
+
+.wotm-error {
+    background-color: #f8d7da;
+    color: #dc3545;
+}
+
+.wotm-info {
+    background-color: #e2e3e5;
+    color: #495057;
+}
+
+/* Order Summary & Tracking History Cards */
+.wotm-order-summary,
+.wotm-tracking-history {
+    margin-top: 30px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    border-top: 4px solid #0d6efd;
+    /* Blue accent */
+}
+
+/* Status hero section */
+.wotm-status-hero {
+    margin: 10px 0 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.wotm-status-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95em;
+    text-transform: capitalize;
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.wotm-status-pill.status-delivered {
+    background-color: #28a745;
+}
+
+.wotm-status-pill.status-in-transit {
+    background-color: #0d6efd;
+}
+
+.wotm-status-pill.status-out-for-delivery {
+    background-color: #17a2b8;
+}
+
+.wotm-status-pill.status-placed {
+    background-color: #6c757d;
+}
+
+.wotm-status-pill.status-alert {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.wotm-status-meta {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.wotm-order-summary h3,
+.wotm-tracking-history h3 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.wotm-order-summary p {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+    color: #444;
+}
+
+.wotm-order-summary strong {
+    color: #222;
+}
+
+.wotm-order-summary .wotm-status-label {
+    font-weight: 600;
+    color: #000;
+    display: inline-block;
+}
+
+.wotm-order-summary h4 {
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Product List in Order Summary */
+.wotm-product-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.wotm-product-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    color: #555;
+}
+
+.wotm-product-item:last-child {
+    border-bottom: none;
+}
+
+.wotm-product-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.wotm-product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.wotm-product-name {
+    font-weight: 600;
+}
+
+/* Tracking form subtitle + "track another" link */
+.wotm-tracking-subtitle {
+    text-align: center;
+    margin-top: -8px;
+    margin-bottom: 24px;
+    color: #666;
+    font-size: 0.95em;
+}
+
+.wotm-track-another-wrap {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.wotm-track-another-link {
+    display: inline-block;
+    font-size: 0.95em;
+    color: #0d6efd;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(13, 110, 253, 0.6);
+    padding-bottom: 2px;
+}
+
+.wotm-track-another-link:hover {
+    color: #0b5ed7;
+    border-bottom-style: solid;
+}
+
+/* Tracking History Streamline */
+.wotm-streamline {
+    position: relative;
+    border-left: 2px solid #ddd;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+.wotm-step {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.wotm-step:last-child {
+    margin-bottom: 0;
+}
+
+.wotm-step-icon {
+    position: absolute;
+    left: -32px;
+    top: 0;
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon colors based on status */
+.status-latest .wotm-step-icon {
+    background-color: #28a745;
+    /* Green */
+}
+
+.status-delivered .wotm-step-icon {
+    background-color: #28a745;
+    /* Green */
+}
+
+.status-in-transit .wotm-step-icon {
+    background-color: #0d6efd;
+    /* Blue */
+}
+
+.status-out-for-delivery .wotm-step-icon {
+    background-color: #17a2b8;
+    /* Teal */
+}
+
+.status-placed .wotm-step-icon {
+    background-color: #6c757d;
+    /* Gray */
+}
+
+.status-alert .wotm-step-icon {
+    background-color: #ffc107;
+    /* Orange */
+}
+
+
+.wotm-step-icon .fas,
+.wotm-step-icon .otm-svg-icon {
+    width: 0.85em;
+    height: 0.85em;
+    color: #fff;
+    vertical-align: middle;
+    display: block;
+    margin: auto;
+}
+
+.wotm-date-time {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wotm-date {
+    font-weight: 600;
+    color: #555;
+}
+
+.wotm-time {
+    font-size: 0.9em;
+}
+
+
+.wotm-tracking-content {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    position: relative;
+    margin-left: 0;
+    border-left: 4px solid #ddd;
+    /* Default border */
+}
+
+/* Content border colors based on status */
+.wotm-tracking-content.status-latest {
+    border-left-color: #28a745;
+    /* Green */
+}
+
+.wotm-tracking-content.status-delivered {
+    border-left-color: #28a745;
+    /* Green */
+}
+
+.wotm-tracking-content.status-in-transit {
+    border-left-color: #0d6efd;
+    /* Blue */
+}
+
+.wotm-tracking-content.status-out-for-delivery {
+    border-left-color: #17a2b8;
+    /* Teal */
+}
+
+.wotm-tracking-content.status-placed {
+    border-left-color: #6c757d;
+    /* Gray */
+}
+
+.wotm-tracking-content.status-alert {
+    border-left-color: #ffc107;
+    /* Orange */
+}
+
+
+.wotm-tracking-content p {
+    margin: 0;
+    color: #333;
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+
+.wotm-current-status-label {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #0d6efd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wotm-tracking-container {
+        margin: 5px;
+        padding: 12px;
+    }
+
+    .wotm-tracking-container h2 {
+        font-size: 1.8em;
+    }
+
+    .wotm-order-summary h3,
+    .wotm-tracking-history h3 {
+        font-size: 1.6em;
+    }
+
+    .wotm-streamline {
+        margin-left: 15px;
+        padding-left: 15px;
+    }
+
+    .wotm-step-icon {
+        left: -27px;
+        width: 22px;
+        height: 22px;
+        font-size: 0.8em;
+    }
+}

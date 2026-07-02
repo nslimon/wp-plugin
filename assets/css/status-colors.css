@@ -1,0 +1,34 @@
+/* Status Colors */
+.com-table td.otm-column-status {
+    font-weight: bold;
+}
+
+.com-table td.otm-column-status.status-wc-processing,
+.com-table td.otm-column-status.status-processing {
+    color: #2196F3 !important; /* Blue */
+}
+
+.com-table td.otm-column-status.status-wc-completed,
+.com-table td.otm-column-status.status-completed {
+    color: #4CAF50 !important; /* Green */
+}
+
+.com-table td.otm-column-status.status-wc-on-hold,
+.com-table td.otm-column-status.status-on-hold {
+    color: #FF9800 !important; /* Orange */
+}
+
+.com-table td.otm-column-status.status-wc-cancelled,
+.com-table td.otm-column-status.status-cancelled {
+    color: #f44336 !important; /* Red */
+}
+
+.com-table td.otm-column-status.status-wc-refunded,
+.com-table td.otm-column-status.status-refunded {
+    color: #607D8B !important; /* Grey */
+}
+
+.com-table td.otm-column-status.status-wc-failed,
+.com-table td.otm-column-status.status-failed {
+    color: #795548 !important; /* Brown */
+}

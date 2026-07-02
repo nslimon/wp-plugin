@@ -1,0 +1,3050 @@
+/* =========================================================================
+ * OTM SVG Icon Base Styles
+ * Inline SVGs replace Font Awesome webfont — no CDN or @font-face needed.
+ * These base styles must appear first; contextual overrides follow below.
+ * ========================================================================= */
+.otm-svg-icon {
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+.error-message {
+    color: red;
+    font-weight: 600;
+}
+
+/* Low order credits / Low SMS balance / Server notice / Inventory low stock: shared design (see shortcode inline styles) */
+.otm-sms-balance-notice-message a,
+.otm-inventory-low-stock-notice-message a {
+    color: #2271b1;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.otm-sms-balance-notice-message a:hover,
+.otm-inventory-low-stock-notice-message a:hover {
+    color: #135e96;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.margin-right-5 {
+    margin-right: 5px;
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.display-none {
+    display: none;
+}
+
+.color-999 {
+    color: #999;
+}
+
+.bg-d9edf7 {
+    background: #d9edf7;
+}
+
+.color-31708f {
+    color: #31708f;
+}
+
+.bg-dff0d8 {
+    background: #dff0d8;
+}
+
+.color-3c763d {
+    color: #3c763d;
+}
+
+.bg-f2dede {
+    background: #f2dede;
+}
+
+.color-a94442 {
+    color: #a94442;
+}
+
+.bg-fcf8e3 {
+    background: #fcf8e3;
+}
+
+.color-8a6d3b {
+    color: #8a6d3b;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    gap: 10px;
+    align-items: center;
+}
+
+.otm-inventory-search-container .otm-inventory-category-select {
+    min-width: 160px;
+    max-width: 220px;
+}
+
+.otm-inventory-search-wrap .product-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    margin-top: 2px;
+}
+
+.filter-container {
+    position: relative;
+}
+
+#filter-button,
+#add-new-order-button,
+#send-sms-button,
+#bulk-sms-button,
+#otm-inventory-bulk-stock-apply-btn,
+#otm-inventory-bulk-threshold-btn,
+#otm-inventory-bulk-enable-stock-btn,
+#otm-inventory-bulk-actions-btn,
+#otm-inventory-bulk-clear-selection,
+.otm-send-to-courier-btn,
+.button[disabled]:not(.otm-resend-courier-btn),
+.otm-column-courier_edit a.button,
+.otm-print-invoice-btn,
+.otm-courier-rate-detail-btn,
+.otm-run-fraud-check-btn,
+.otm-send-abandoned-cart-sms-btn,
+.otm-convert-abandoned-cart-btn,
+.otm-delete-abandoned-cart-btn,
+.otm-inventory-enable-stock,
+.otm-inventory-edit-btn,
+#otm-order-summary-btn,
+#otm-more-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--otm-btn-text, #fff);
+    background-color: var(--otm-btn-bg, #0d6efd);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: none;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Main toolbar filter: "Clear Filter" state (deep red, distinct from primary blue) */
+#filter-button.otm-main-filter-clear {
+    background-color: #b02a37;
+    color: #fff;
+}
+
+#filter-button:hover,
+#add-new-order-button:hover,
+#send-sms-button:hover,
+#bulk-sms-button:hover,
+#otm-inventory-bulk-stock-apply-btn:hover,
+#otm-inventory-bulk-threshold-btn:hover,
+#otm-inventory-bulk-enable-stock-btn:hover,
+#otm-inventory-bulk-actions-btn:hover,
+#otm-inventory-bulk-clear-selection:hover,
+.otm-send-to-courier-btn:hover,
+.otm-print-invoice-btn:hover,
+.otm-courier-rate-detail-btn:hover,
+.otm-run-fraud-check-btn:hover,
+.otm-send-abandoned-cart-sms-btn:hover,
+.otm-convert-abandoned-cart-btn:hover,
+.otm-delete-abandoned-cart-btn:hover,
+.otm-inventory-enable-stock:hover,
+.otm-inventory-edit-btn:hover,
+#otm-order-summary-btn:hover,
+#otm-more-btn:hover {
+    background-color: var(--otm-btn-hover-bg, #0b5ed7);
+    box-shadow: 0 2px 4px rgba(13, 110, 253, 0.3);
+}
+
+#filter-button.otm-main-filter-clear:hover {
+    background-color: #94222e;
+    box-shadow: 0 2px 4px rgba(176, 42, 55, 0.35);
+}
+
+/* Order manager: Inventory + bell as one button (matches send-sms-button) */
+.otm-inventory-button-group {
+    display: inline-flex;
+    align-items: stretch;
+    border-radius: 5px;
+    overflow: visible;
+    background-color: var(--otm-btn-bg, #0d6efd);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    padding: 0 4px;
+}
+
+.otm-inventory-button-group:hover {
+    background-color: var(--otm-btn-hover-bg, #0b5ed7);
+    box-shadow: 0 2px 4px rgba(13, 110, 253, 0.3);
+}
+
+.otm-inventory-button-main {
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--otm-btn-text, #fff);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    transition: background-color 0.2s ease;
+}
+
+.otm-inventory-button-main:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.otm-inventory-button-bell-wrap {
+    position: relative;
+    display: inline-flex;
+}
+
+.otm-inventory-button-bell-wrap:first-child .otm-inventory-button-bell {
+    border-left: none;
+}
+
+.otm-inventory-button-bell {
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--otm-btn-text, #fff);
+    background: transparent;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.otm-inventory-button-bell:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.otm-inventory-button-bell .dashicons,
+.otm-inventory-button-bell .otm-icon,
+.otm-inventory-button-bell .otm-svg-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.otm-inventory-button-bell-wrap .otm-inventory-low-stock-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #dc3545;
+    color: #fff;
+    border-radius: 10px;
+    min-width: 18px;
+    height: 18px;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    margin: 4px;
+}
+
+#otm-inventory-button-wrap #otm-inventory-low-stock-dropdown {
+    z-index: 1000;
+}
+
+/* Low-stock dropdown: improved design */
+#otm-inventory-low-stock-dropdown {
+    width: 320px !important;
+    max-height: 320px;
+    padding: 0 !important;
+    border-radius: 8px;
+    overflow: visible;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+#otm-inventory-low-stock-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: 14px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #fff;
+    filter: drop-shadow(0 -1px 1px rgba(0, 0, 0, 0.06));
+}
+
+#otm-inventory-low-stock-dropdown .filter-option:first-child {
+    margin: 0;
+    padding: 12px 14px;
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border-bottom: 1px solid var(--otm-border, #e2e8f0);
+    border-radius: 8px 8px 0 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--otm-cell-text, #64748b);
+}
+
+#otm-inventory-low-stock-dropdown .filter-option:first-child strong {
+    font-weight: 600;
+}
+
+#otm-inventory-low-stock-dropdown #otm-inventory-low-stock-list {
+    padding: 12px 14px;
+    max-height: 260px;
+    overflow-y: auto;
+    font-size: 13px;
+    color: var(--otm-cell-text, #64748b);
+}
+
+#otm-inventory-low-stock-dropdown #otm-inventory-low-stock-list:empty,
+#otm-inventory-low-stock-dropdown #otm-inventory-low-stock-list:not(:has(ul)):not(:has(p)) {
+    text-align: center;
+}
+
+#otm-inventory-low-stock-dropdown #otm-inventory-low-stock-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#otm-inventory-low-stock-dropdown #otm-inventory-low-stock-list li {
+    padding: 10px 14px;
+    margin: 0 6px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--otm-cell-text, #1e293b);
+    border-bottom: none;
+    transition: background-color 0.15s ease;
+}
+
+#otm-inventory-low-stock-dropdown #otm-inventory-low-stock-list li:hover {
+    background-color: #f1f5f9;
+}
+
+#otm-inventory-low-stock-dropdown #otm-inventory-low-stock-list li:not(:last-child) {
+    margin-bottom: 2px;
+}
+
+#otm-inventory-low-stock-dropdown #otm-inventory-low-stock-list>p {
+    margin: 0;
+    padding: 16px 0;
+    text-align: center;
+    font-size: 13px;
+    color: var(--otm-cell-text, #64748b);
+}
+
+/* Inventory: top row – two cards (search left, bulk right) */
+.otm-inventory-top-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.otm-inventory-card {
+    padding: 14px 16px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid var(--otm-border, #cbd5e1);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+}
+
+.otm-inventory-search-card {
+    flex: 1;
+    min-width: 280px;
+}
+
+.otm-inventory-search-card .search-container {
+    margin-bottom: 0;
+}
+
+.otm-inventory-bulk-card {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+}
+
+.otm-inventory-bulk-placeholder {
+    margin: 0;
+    font-size: 14px;
+    color: var(--otm-cell-text, #64748b);
+    line-height: 1.5;
+}
+
+.otm-inventory-bulk-card #otm-inventory-bulk-bar {
+    margin: 0;
+}
+
+.otm-inventory-bulk-bar-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+}
+
+.otm-inventory-bulk-bar-summary {
+    font-weight: 600;
+    color: var(--otm-cell-text, #0f172a);
+}
+
+.otm-inventory-bulk-bar-hint {
+    font-size: 13px;
+    color: var(--otm-cell-text, #64748b);
+}
+
+.otm-inventory-bulk-actions-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    min-width: 320px;
+    max-width: 420px;
+    padding: 12px 14px;
+    background: #fff;
+    border: 1px solid var(--otm-border, #cbd5e1);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.otm-inventory-bulk-actions-intro {
+    margin: 0 0 12px 0;
+    font-size: 13px;
+    color: var(--otm-cell-text, #64748b);
+    line-height: 1.4;
+}
+
+.otm-inventory-bulk-actions-section {
+    margin-bottom: 12px;
+}
+
+.otm-inventory-bulk-actions-section:last-child {
+    margin-bottom: 0;
+}
+
+.otm-inventory-bulk-actions-section-title {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--otm-cell-text, #64748b);
+    margin-bottom: 6px;
+}
+
+.otm-inventory-bulk-actions-dropdown .filter-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.otm-inventory-bulk-actions-dropdown .filter-option:last-child {
+    margin-bottom: 0;
+}
+
+.otm-inventory-bulk-actions-dropdown .filter-option label {
+    margin: 0;
+    font-size: 13px;
+}
+
+.otm-inventory-bulk-actions-dropdown .otm-inventory-bulk-input {
+    width: 70px;
+}
+
+/* Inventory: tabs row with Total value card on the right */
+.otm-inventory-tabs-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.otm-inventory-tabs-row .tab-buttons {
+    margin-bottom: 0;
+}
+
+.otm-inventory-tab-count-low-stock {
+    font-weight: bold;
+    color: #c00;
+}
+
+.otm-inventory-total-value-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid var(--otm-border, #cbd5e1);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    min-width: 120px;
+}
+
+.otm-inventory-total-value-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--otm-cell-text, #64748b);
+}
+
+.otm-inventory-total-value-amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--otm-cell-text, #0f172a);
+}
+
+.otm-inventory-total-value-label-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.otm-inventory-card-info {
+    display: inline-flex;
+    align-items: center;
+    cursor: help;
+    opacity: 0.75;
+    color: var(--otm-cell-text, #64748b);
+}
+
+.otm-inventory-card-info:hover {
+    opacity: 1;
+}
+
+.otm-inventory-card-info .dashicons,
+.otm-inventory-card-info .otm-icon,
+.otm-inventory-card-info .otm-svg-icon {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+/* Column header info icons (tooltips) – order manager and inventory */
+.otm-th-text,
+.otm-inventory-th-text {
+    vertical-align: middle;
+}
+
+.otm-th-info,
+.otm-inventory-th-info {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 3px;
+    cursor: help;
+    opacity: 0.75;
+    vertical-align: middle;
+}
+
+.otm-th-info:hover,
+.otm-inventory-th-info:hover {
+    opacity: 1;
+}
+
+.otm-th-info .dashicons,
+.otm-inventory-th-info .dashicons,
+.otm-th-info .otm-icon,
+.otm-inventory-th-info .otm-icon,
+.otm-th-info .otm-svg-icon,
+.otm-inventory-th-info .otm-svg-icon {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+/* Tooltip / popover for column and card help – order manager and inventory */
+#otm-order-tooltip-popover.otm-order-tooltip-popover,
+#otm-inventory-tooltip-popover.otm-inventory-tooltip-popover {
+    position: fixed;
+    z-index: 99999;
+    max-width: 280px;
+    padding: 8px 12px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #fff;
+    background: #1d2327;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+#otm-order-tooltip-popover.otm-order-tooltip-popover.is-visible,
+#otm-inventory-tooltip-popover.otm-inventory-tooltip-popover.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#otm-order-tooltip-popover.otm-order-tooltip-popover.is-visible.is-pinned,
+#otm-inventory-tooltip-popover.otm-inventory-tooltip-popover.is-visible.is-pinned {
+    pointer-events: auto;
+}
+
+/* Inventory: bulk bar (inside bulk card) */
+#otm-inventory-bulk-bar.otm-inventory-bulk-bar {
+    display: none;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: row;
+}
+
+#otm-inventory-bulk-bar.otm-inventory-bulk-bar[style*="flex"],
+#otm-inventory-bulk-bar.otm-inventory-bulk-bar[style*="display: flex"] {
+    display: flex !important;
+}
+
+.otm-inventory-bulk-input {
+    width: 60px;
+}
+
+.filter-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 4px;
+    background-color: #fff;
+    border: 1px solid #b6d4fe;
+    border-radius: 8px;
+    padding: 16px;
+    z-index: 100;
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.12), 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.filter-option {
+    margin-bottom: 10px;
+}
+
+.filter-option label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.filter-option input[type='date'],
+.filter-option input[type='text'],
+.filter-option select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #b6d4fe;
+    border-radius: 5px;
+}
+
+.filter-option input:focus,
+.filter-option select:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 1px #0d6efd;
+}
+
+#apply-filters {
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #198754;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#apply-filters:hover {
+    background-color: #157347;
+    box-shadow: 0 2px 4px rgba(25, 135, 84, 0.3);
+}
+
+#com-search {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+#com-search::-webkit-input-placeholder {
+    /* Edge */
+    color: black;
+}
+
+#com-search:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: black;
+}
+
+#com-search::placeholder {
+    color: black;
+    opacity: 1;
+    /* Firefox */
+}
+
+#bulk-status-dropdown option,
+#bulk-assign-dropdown-header option,
+#otm-bulk-print-mode option {
+    background-color: white;
+    color: black;
+}
+
+
+.tab-buttons {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tab-buttons button {
+    padding: 10px 16px;
+    margin-right: 0;
+    background: #e8f4fc;
+    border: 1px solid #b6d4fe;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 1px 2px rgba(13, 110, 253, 0.08);
+    border-radius: 6px;
+    cursor: pointer;
+    color: #0a58ca;
+}
+
+.tab-buttons button:hover {
+    background: #cfe2ff;
+    border-color: #9ec5fe;
+    color: #084298;
+    box-shadow: 0 2px 4px rgba(13, 110, 253, 0.15);
+}
+
+.tab-buttons button.active {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+    box-shadow: 0 2px 4px rgba(13, 110, 253, 0.35);
+}
+
+.tab-buttons button.active:hover {
+    background: #0b5ed7;
+    border-color: #0b5ed7;
+    color: white;
+    box-shadow: 0 2px 6px rgba(13, 110, 253, 0.4);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+:root textarea {
+    overflow: auto;
+    padding: 10px 5px;
+    min-height: 70px;
+    resize: vertical;
+}
+
+/* Front-end table container: use most of viewport, theme-aligned border and radius */
+#otm-app-container {
+    padding: 16px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.com-table-wrapper {
+    max-height: calc(100vh - 200px);
+    min-height: 280px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid var(--otm-border, #b6d4fe);
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(13, 110, 253, 0.08);
+    box-sizing: border-box;
+}
+
+/* Horizontal scroll wrapper for Abandoned Carts table (scrollbar at bottom like Orders tab) */
+.com-table-scroll-inner {
+    overflow-x: auto;
+    min-height: 0;
+}
+
+.com-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 10px;
+    color: black;
+}
+
+/* Abandoned Carts: fixed layout so column resizer works (same as Orders table) */
+.com-table.com-table-abandoned {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.com-table th,
+.com-table td {
+    border: 1px solid var(--otm-border, #b6d4fe);
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--otm-cell-text, #1d2327);
+    font-weight: normal;
+    overflow: hidden;
+}
+
+.com-table thead th {
+    position: sticky;
+    top: 0;
+    background: var(--otm-header-bg, #0d6efd);
+    color: var(--otm-header-text, #ffe7e7);
+    z-index: 1;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+a.track-link-button {
+    padding: 4px 10px;
+    font-size: 12px;
+    color: var(--otm-btn-text, #fff);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    background: var(--otm-btn-bg, #0d6efd);
+    transition: background-color 0.2s ease;
+}
+
+a.track-link-button:hover {
+    background: var(--otm-btn-hover-bg, #0b5ed7);
+}
+
+.com-order-id-link {
+    color: var(--otm-link-color, #0d6efd) !important;
+}
+
+.com-order-id-link:hover {
+    color: var(--otm-link-hover-color, #0b5ed7) !important;
+}
+
+.com-table tbody tr {
+    background: var(--otm-row-bg, #fff);
+}
+
+.com-table tbody tr:hover {
+    background-color: var(--otm-row-hover-bg, #e8f4fc);
+}
+
+.com-table .otm-column-seller {
+    overflow: hidden;
+}
+
+.com-table td.editing-products {
+    overflow: visible;
+}
+
+/* Accordion styles for Last Modified & Customer Note (and tracking) */
+.tracking-accordion {
+    width: 100%;
+    text-align: left;
+}
+
+.accordion {
+    background-color: var(--otm-accordion-bg, #e8f4fc);
+    color: var(--otm-cell-text, #1d2327);
+    cursor: pointer;
+    padding: 8px 28px 8px 10px;
+    width: 100%;
+    border: 1px solid var(--otm-border, #b6d4fe);
+    text-align: left;
+    outline: none;
+    font-size: 13px;
+    line-height: 1.4;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    margin-top: 4px;
+    border-radius: 5px;
+    text-transform: none !important;
+    position: relative;
+}
+
+.accordion:hover {
+    background-color: var(--otm-accordion-hover-bg, #cfe2ff);
+    border-color: var(--otm-border, #9ec5fe);
+}
+
+.accordion.active {
+    background-color: #fff;
+    border-color: var(--otm-accordion-active-border, #0d6efd);
+    box-shadow: 0 0 0 1px var(--otm-accordion-active-border, #0d6efd);
+}
+
+/* Expand/collapse indicator */
+.accordion::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #0a58ca;
+    transition: transform 0.2s ease;
+}
+
+.accordion.active::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.panel {
+    padding: 10px 12px;
+    display: none;
+    background-color: #f8fbff;
+    overflow: visible;
+    border: 1px solid var(--otm-border, #b6d4fe);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    white-space: pre-line;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--otm-cell-text, #1d2327);
+}
+
+/* Duplicate phone row: soft warning highlight (theme-friendly) */
+.com-table tr.duplicate-phone {
+    background-color: #fef3c7 !important;
+}
+
+.com-table tr.duplicate-phone td:first-child {
+    border-left: 3px solid #f59e0b;
+}
+
+.com-table tr.duplicate-phone:hover {
+    background-color: #fde68a !important;
+}
+
+/* Row selected color */
+.com-table tr.selected {
+    background-color: var(--otm-row-selected-bg, #36d4ed) !important;
+}
+
+/* Status dropdown styles */
+.status-dropdown {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.update-status-button {
+    padding: 4px 10px;
+    font-size: 12px;
+    background: #1d2327;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.update-status-button:hover {
+    background: #0d6efd;
+}
+
+.update-status-button-icon,
+#otm-bulk-send-to-courier,
+#otm-bulk-sync-courier-status,
+.otm-resend-courier-btn,
+.otm-resync-status-btn,
+#otm-bulk-print-invoices {
+    background: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    padding: 0 5px 0 10px;
+    font-size: 17px;
+}
+
+.status-update-message {
+    font-size: 10px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+
+
+.original-value {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Block button styles */
+.block-button {
+    padding: 4px 10px;
+    font-size: 12px;
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.block-button:hover {
+    background: #bb2d3b;
+}
+
+.block-message {
+    font-size: 10px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+/* Unblock button styles */
+.unblock-button {
+    padding: 4px 10px;
+    font-size: 12px;
+    background: #198754;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.unblock-button:hover {
+    background: #157347;
+}
+
+/* Pagination Styles */
+.pagination {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.page-button {
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 0 3px;
+    font-size: 13px;
+    color: #0a58ca;
+    background: #fff;
+    border: 1px solid #b6d4fe;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.page-button:hover {
+    background: #e8f4fc;
+    border-color: #0d6efd;
+}
+
+.page-button.active {
+    background: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+/* Search results message */
+.search-results-message {
+    padding: 10px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Product editing styles */
+.product-cell {
+    position: relative;
+}
+
+.product-editor {
+    padding: 5px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.product-search-input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.product-suggestions {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 100;
+    width: calc(100% - 22px);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.product-suggestions ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.product-suggestions li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.product-suggestions li:hover {
+    background: #A4C2F4;
+}
+
+.selected-product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.remove-product-button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.update-products-button,
+.cancel-edit-products-button {
+    font-size: 12px;
+    cursor: pointer;
+    padding: 4px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 5px 7px;
+    transition: background-color 0.2s ease;
+}
+
+.update-products-button {
+    background: #0d6efd;
+}
+
+.update-products-button:hover {
+    background: #0b5ed7;
+}
+
+.cancel-edit-products-button {
+    background: #6c757d;
+}
+
+.cancel-edit-products-button:hover {
+    background: #5c636a;
+}
+
+.pagination .ellipsis {
+    padding: 5px 12px;
+    margin: 0 3px;
+}
+
+.resizer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    cursor: col-resize;
+    user-select: none;
+    height: 100%;
+    display: none;
+}
+
+th:hover .resizer {
+    display: block;
+}
+
+/* Abandoned Carts: always show resizer so it's grabbable (table is in scroll wrapper) */
+.com-table.com-table-abandoned thead th .resizer {
+    display: block;
+}
+
+/* Inventory table: same as order table - fixed layout, resizable columns */
+.com-table.wotm-inventory-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* Inventory Product column: make product name link clearly visible */
+.wotm-inventory-table .otm-inventory-product-link {
+    color: var(--otm-link-color, #0d6efd);
+}
+
+.wotm-inventory-table .otm-inventory-product-link:hover {
+    color: var(--otm-link-hover-color, #0b5ed7);
+}
+
+/* Inventory: combined SL + checkbox column (checkbox left, serial number right) */
+.otm-inventory-col-sl-checkbox .otm-inventory-sl-checkbox-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#otm-app-container .otm-inventory-table-container .otm-inventory-enable-stock,
+#otm-app-container .otm-inventory-table-container .otm-inventory-edit-btn {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.editable-cell,
+.product-cell,
+.otm-column-customer_note {
+    position: relative;
+}
+
+.edit-cell-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.edit-cell-icon .dashicons,
+.edit-cell-icon .otm-icon,
+.edit-cell-icon .otm-svg-icon {
+    color: #0d6efd;
+    transition: color 0.2s ease;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+.edit-cell-icon:hover .dashicons,
+.edit-cell-icon:hover .otm-icon,
+.edit-cell-icon:hover .otm-svg-icon {
+    color: #0b5ed7;
+}
+
+.editable-cell:hover .edit-cell-icon,
+.product-cell:hover .edit-cell-icon,
+.otm-column-customer_note:hover .edit-cell-icon {
+    display: block;
+}
+
+.cell-data-input {
+    width: 100%;
+}
+
+.sort-icon {
+    cursor: pointer;
+    margin-left: 5px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+/* SVG sort icons */
+.sort-icon .otm-svg-icon {
+    margin: -10px auto 0;
+    color: var(--otm-header-text, #ffe7e7);
+    width: 13px;
+    height: 13px;
+    display: block;
+    opacity: 0.9;
+    transition: color 0.2s, opacity 0.2s;
+}
+
+.sort-icon .otm-svg-icon:first-child {
+    margin-top: 0;
+}
+
+.com-table th .sort-icon.active-sort-asc .otm-icon-sort-up,
+.com-table th .sort-icon.active-sort-desc .otm-icon-sort-down {
+    color: #fff;
+    opacity: 1;
+}
+
+.sort-icon:not(.active-sort-asc) .otm-icon-sort-up:hover,
+.sort-icon:not(.active-sort-desc) .otm-icon-sort-down:hover {
+    color: rgba(255, 255, 255, 0.95);
+    opacity: 1;
+}
+
+#otm-tooltip {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    z-index: 9999;
+    font-size: 12px;
+    pointer-events: none;
+    /* So the tooltip doesn't interfere with mouse events */
+}
+
+.otm-license-container {
+    margin-top: 15px;
+}
+
+.otm-license-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.otm-license-status {
+    font-weight: 600;
+}
+
+.otm-duplicate-order-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+
+.otm-duplicate-order-btn:hover {
+    background-color: transparent !important;
+}
+
+.update-status-button-icon:hover,
+#otm-bulk-send-to-courier:hover,
+#otm-bulk-sync-courier-status:hover,
+.otm-resend-courier-btn:hover,
+.otm-resync-status-btn:hover {
+    background: transparent;
+    color: #000000;
+}
+
+.otm-send-to-courier-btn:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.otm-send-to-courier-btn,
+.button[disabled]:not(.otm-resend-courier-btn):not(.otm-run-fraud-check-btn):not(.otm-courier-rate-detail-btn):not(.otm-print-invoice-btn):not(.otm-send-abandoned-cart-sms-btn):not(.otm-convert-abandoned-cart-btn):not(.otm-delete-abandoned-cart-btn),
+.otm-column-courier_edit a.button {
+    width: 50%;
+}
+
+td.otm-column-courier_status,
+td.otm-column-send_to_courier {
+    text-align: left !important;
+}
+
+td.otm-column-courier_rate {
+    overflow: visible;
+}
+
+.otm-duplicate-order-btn .otm-svg-icon {
+    color: #0a58ca;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin: 0 0 5px 0;
+    transition: color 0.2s ease;
+}
+
+.otm-duplicate-order-btn:hover .otm-svg-icon {
+    color: #084298;
+}
+
+.otm-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 9999;
+    display: none;
+}
+
+.otm-toast.show {
+    display: block;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 20px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 20px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes otm-highlight-success {
+    from {
+        background-color: #dff0d8;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+.otm-row-highlight {
+    animation: otm-highlight-success 1.5s ease-out;
+}
+
+.filter-buttons-container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+/* Bulk SMS Send button: instant tooltip (no browser delay) */
+.otm-bulk-send-wrap {
+    position: relative;
+}
+
+.otm-bulk-send-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.4;
+    padding: 8px 10px;
+    border-radius: 4px;
+    white-space: normal;
+    max-width: 260px;
+    text-align: center;
+    z-index: 10010;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+.otm-bulk-send-wrap:hover .otm-bulk-send-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.filter-dropdown-button {
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: none;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#apply-filters {
+    width: 25%;
+    background-color: #198754;
+}
+
+#apply-filters:hover {
+    background-color: #157347;
+    box-shadow: 0 2px 4px rgba(25, 135, 84, 0.3);
+}
+
+#export-csv-button {
+    width: 50%;
+    background-color: #0d6efd;
+}
+
+#export-csv-button:hover {
+    background-color: #0b5ed7;
+    box-shadow: 0 2px 4px rgba(13, 110, 253, 0.3);
+}
+
+#clear-filters-button {
+    width: 25%;
+    background-color: #dc3545;
+}
+
+#clear-filters-button:hover {
+    background-color: #bb2d3b;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
+}
+
+.tab-dropdown {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #otm-app-container {
+        padding: 12px;
+    }
+
+    .com-table-wrapper {
+        max-height: calc(100vh - 220px);
+    }
+
+    #com-search {
+        font-size: 14px;
+        flex: 1 1 100%;
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .search-container>.add-new-order-container,
+    .search-container>.sms-container,
+    .search-container>.filter-container,
+    .search-container>#otm-profit-loss-toggle-btn {
+        flex: 1 1 auto;
+        min-width: 120px;
+    }
+
+    /* Left-aligned dropdowns on mobile */
+    .search-container .filter-dropdown,
+    #add-new-order-modal.filter-dropdown,
+    #send-sms-dropdown.filter-dropdown,
+    #otm-inventory-bulk-modal.filter-dropdown {
+        width: min(500px, calc(100vw - 24px));
+        max-width: calc(100vw - 24px);
+        left: 0;
+        right: auto;
+    }
+
+    /* Right-aligned dropdowns on mobile */
+    #bulk-sms-dropdown.filter-dropdown,
+    #filter-dropdown.filter-dropdown,
+    #otm-inventory-low-stock-dropdown.filter-dropdown {
+        width: min(500px, calc(100vw - 24px));
+        max-width: calc(100vw - 24px);
+        right: 0;
+        left: auto;
+    }
+
+    /* Send SMS & Bulk SMS: on mobile keep position:absolute so they scroll with the button (like Add New Order / Filter).
+       Left is set by JS when opened so the dropdown stays within the viewport. */
+    #send-sms-dropdown.filter-dropdown,
+    #otm-inventory-bulk-modal.filter-dropdown {
+        position: absolute !important;
+        left: 0;
+        right: auto;
+        width: min(500px, calc(100vw - 24px)) !important;
+        max-width: calc(100vw - 24px) !important;
+        max-height: 80vh;
+        z-index: 1001;
+    }
+
+    #bulk-sms-dropdown.filter-dropdown {
+        position: absolute !important;
+        right: 0;
+        left: auto;
+        width: min(500px, calc(100vw - 24px)) !important;
+        max-width: calc(100vw - 24px) !important;
+        max-height: 80vh;
+        z-index: 1001;
+    }
+
+    .tab-buttons button {
+        display: none;
+    }
+
+    .tab-dropdown {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        background-color: #e7f1ff;
+        color: #0d6efd;
+        border: 1px solid #a9c7ff;
+        border-radius: 4px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27292.4%27%20height%3D%27292.4%27%3E%3Cpath%20fill%3D%27%230D6EFD%27%20d%3D%27M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%27%2F%3E%3C%2Fsvg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #otm-app-container {
+        padding: 10px;
+    }
+
+    .com-table-wrapper {
+        min-height: 200px;
+    }
+
+    .search-container>.add-new-order-container,
+    .search-container>.sms-container,
+    .search-container>.filter-container,
+    .search-container>#otm-profit-loss-toggle-btn {
+        min-width: 100px;
+    }
+}
+
+/* Low credits / SMS balance / Server notice / Inventory low stock: dismiss button vertically centered on mobile */
+@media (max-width: 768px) {
+
+    .otm-order-credits-notice,
+    .otm-sms-balance-notice,
+    .otm-server-notice,
+    .otm-inventory-low-stock-notice {
+        padding-right: 36px !important;
+    }
+
+    .otm-order-credits-notice-dismiss,
+    .otm-sms-balance-notice-dismiss,
+    .otm-server-notice-dismiss,
+    .otm-inventory-low-stock-notice-dismiss {
+        top: 50% !important;
+        right: 8px !important;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+    }
+}
+
+/* First accordion in cell: no extra top margin */
+.otm-column-last_modified .tracking-accordion:first-child .accordion,
+.otm-column-customer_note .tracking-accordion:first-child .accordion {
+    margin-top: 0;
+}
+
+/* Last Modified & Customer Note: truncated preview (2 lines) */
+.otm-column-last_modified .accordion-text,
+.otm-column-customer_note .accordion-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+.otm-column-last_modified .accordion.active .accordion-text,
+.otm-column-customer_note .accordion.active .accordion-text {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    display: block;
+}
+
+.otm-column-products .product-display a {
+    color: #0D6EFD !important;
+}
+
+/* === Standardized Modal Button Styles === */
+#send-sms-action-button,
+#create-order-button,
+#cancel-new-order-button {
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff !important;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: none;
+    width: auto;
+    flex-grow: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#create-order-button,
+#send-sms-action-button {
+    background-color: #0d6efd !important;
+}
+
+#create-order-button:hover,
+#send-sms-action-button:hover {
+    background-color: #0b5ed7 !important;
+    box-shadow: 0 2px 4px rgba(13, 110, 253, 0.3);
+}
+
+#cancel-new-order-button {
+    background-color: #dc3545 !important;
+}
+
+#cancel-new-order-button:hover {
+    background-color: #bb2d3b !important;
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
+}
+
+/* Zone Selector Styles */
+.zone-selector-container {
+    position: relative;
+}
+
+.zone-search-input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.zone-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Bulk SMS dropdown: zone list must not be clipped and must sit above the panel */
+#bulk-sms-dropdown .zone-selector-container {
+    position: relative;
+}
+
+#bulk-sms-dropdown .zone-dropdown {
+    z-index: 10002;
+}
+
+/* Bulk SMS dropdown: scrollbar like Add New Order modal (uses .filter-dropdown max-height + overflow-y: auto) */
+#bulk-sms-dropdown.filter-dropdown {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.com-table td.otm-column-zone {
+    overflow: visible;
+}
+
+/* Match column (Zone Change): flex block fills resizable column; content wraps and stays centered */
+.com-table td.otm-column-match {
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.com-table td.otm-column-match .otm-zone-match-placeholder {
+    display: inline-block;
+    color: #8c8f94;
+    font-size: 15px;
+    line-height: 1;
+    opacity: 0.85;
+}
+
+.com-table td.otm-column-match .otm-zone-match-cell {
+    font-size: 12px;
+    line-height: 1.35;
+    white-space: normal;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 6px 8px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 4px 6px;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+/* No linked Ready order yet — quiet dashed frame (same tone as table borders) */
+.com-table td.otm-column-match .otm-zone-match-cell[data-match-kind=''] {
+    background: var(--otm-row-bg, #fff);
+    border: 1px dashed color-mix(in srgb, var(--otm-border, #b6d4fe) 70%, #c3c4c7);
+}
+
+/* Linked match — flat tint (column width varies) */
+.com-table td.otm-column-match .otm-zone-match-cell[data-match-kind]:not([data-match-kind='']):not(.otm-zone-match-product-mismatch) {
+    background: #f0f6ff;
+    border: 1px solid var(--otm-border, #b6d4fe);
+    box-shadow: none;
+}
+
+.com-table tbody tr:hover td.otm-column-match .otm-zone-match-cell[data-match-kind]:not([data-match-kind='']):not(.otm-zone-match-product-mismatch) {
+    border-color: color-mix(in srgb, var(--otm-border, #b6d4fe) 85%, #0d6efd);
+}
+
+.com-table td.otm-column-match .otm-zone-match-prefix {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 11px;
+    font-weight: 600;
+    color: #50575e;
+    text-align: center;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+}
+
+.com-table td.otm-column-match .otm-zone-match-ref-editable {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    max-width: 100%;
+    flex: 0 1 auto;
+    padding: 2px 20px 2px 6px;
+    vertical-align: middle;
+    background: #fff;
+    border: 1px solid color-mix(in srgb, var(--otm-border, #b6d4fe) 90%, #94b8f0);
+    border-radius: 4px;
+    box-shadow: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.com-table td.otm-column-match .otm-zone-match-ref-editable:hover {
+    border-color: var(--otm-link-color, #0d6efd);
+    box-shadow: 0 0 0 1px rgba(13, 110, 253, 0.1);
+}
+
+.com-table td.otm-column-match .otm-zone-match-ref-editable .cell-data {
+    display: inline-block;
+    min-height: 1.15em;
+    font-size: 13px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--otm-link-color, #0d6efd);
+}
+
+.com-table td.otm-column-match .otm-zone-match-ref-editable .cell-data-input {
+    width: 100%;
+    min-width: 4em;
+    box-sizing: border-box;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid var(--otm-border, #b6d4fe);
+}
+
+.com-table td.otm-column-match .otm-zone-match-product-mismatch {
+    color: #9f1239;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: linear-gradient(180deg, #fff7ed 0%, #ffedd5 100%);
+    border: 1px solid #fdba74;
+    border-radius: 8px;
+    padding: 6px 8px;
+    justify-content: center;
+}
+
+.com-table td.otm-column-match .otm-zone-parcel-steadfast-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 8.5rem;
+    max-width: 100%;
+    min-height: 32px;
+    height: auto;
+    margin: 0;
+    padding: 6px 12px;
+    border: 1px solid color-mix(in srgb, var(--otm-border, #b6d4fe) 75%, #c3c4c7);
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    vertical-align: middle;
+    flex: 1 1 8.5rem;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.com-table td.otm-column-match .otm-zone-parcel-steadfast-btn__label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0;
+    color: var(--otm-link-color, #0d6efd);
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.com-table td.otm-column-match .otm-zone-parcel-steadfast-btn:focus-visible {
+    outline: 2px solid var(--otm-link-color, #0d6efd);
+    outline-offset: 2px;
+}
+
+.com-table td.otm-column-match .otm-zone-parcel-steadfast-btn:hover {
+    border-color: var(--otm-link-color, #0d6efd);
+    background: var(--otm-row-hover-bg, #e8f4fc);
+}
+
+.com-table td.otm-column-match .otm-zone-parcel-steadfast-btn--disabled {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 8.5rem;
+    max-width: 100%;
+    min-height: 32px;
+    height: auto;
+    margin: 0;
+    padding: 6px 12px;
+    opacity: 0.65;
+    cursor: not-allowed;
+    vertical-align: middle;
+    border-radius: 6px;
+    border: 1px dashed #c3c4c7;
+    background: #f6f7f7;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+    flex: 1 1 8.5rem;
+    box-sizing: border-box;
+}
+
+.com-table td.otm-column-match .otm-zone-parcel-steadfast-btn--disabled .otm-zone-parcel-steadfast-btn__label {
+    color: #787c82;
+    font-weight: 600;
+}
+
+/* Browsers without color-mix: fall back to solid borders */
+@supports not (background: color-mix(in srgb, red, blue)) {
+    .com-table td.otm-column-match .otm-zone-match-cell[data-match-kind=''] {
+        border-color: #c3c4c7;
+    }
+
+    .com-table td.otm-column-match .otm-zone-match-ref-editable {
+        border-color: #b6d4fe;
+    }
+
+    .com-table td.otm-column-match .otm-zone-parcel-steadfast-btn {
+        border-color: #c3c4c7;
+    }
+}
+
+#otm-profit-loss-toggle-btn {
+    background-color: #0d6efd;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 15px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#otm-profit-loss-toggle-btn:hover {
+    background-color: #0b5ed7;
+    box-shadow: 0 2px 4px rgba(13, 110, 253, 0.3);
+}
+
+#otm-profit-loss-toggle-btn.active {
+    background-color: #0b5ed7 !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.otm-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+}
+
+.otm-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.otm-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cbd5e1;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.otm-slider.round {
+    border-radius: 34px;
+}
+
+.otm-slider.round:before {
+    border-radius: 50%;
+}
+
+.otm-slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #fff;
+    transition: transform 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+input:checked+.otm-slider {
+    background-color: #0d6efd;
+}
+
+input:focus+.otm-slider {
+    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.4);
+}
+
+input:checked+.otm-slider:before {
+    transform: translateX(14px);
+}
+
+/* Zone Dropdown Styles */
+.zone-dropdown ul {
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.zone-dropdown li {
+    padding: 8px 12px;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.zone-dropdown li:last-child {
+    border-bottom: none;
+}
+
+.zone-dropdown li:hover {
+    background-color: #f5f5f5;
+}
+
+.zone-dropdown .city-item:hover,
+.zone-dropdown .zone-back-btn:hover {
+    background-color: #e9e9e9;
+}
+
+.zone-dropdown .city-group,
+.zone-dropdown .zone-back-btn {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+.zone-dropdown .zone-back-btn {
+    color: #0d6efd;
+}
+
+.zone-dropdown .otm-zone-empty-msg {
+    cursor: default;
+    background-color: #fff8e5;
+    border-left: 4px solid #f0ad4e;
+    color: #5a4a2a;
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 10px 12px;
+    margin: 0;
+    white-space: normal;
+}
+
+.zone-dropdown .otm-zone-empty-msg:hover {
+    background-color: #fff8e5;
+}
+
+/* OTP Verification Styles */
+.otm-otp-container {
+    border: 1px solid #e0e0e0;
+    padding-top: 6px;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* OTP buttons: capitalize label (JS also sets inline for robustness) */
+.otm-otp-container #otm-send-otp-button,
+.otm-otp-container #otm-verify-otp-button,
+button#otm-send-otp-button,
+button#otm-verify-otp-button {
+    text-transform: capitalize !important;
+}
+
+
+.otm-otp-container .button.alt:disabled {
+    cursor: not-allowed !important;
+    opacity: 0.7 !important;
+}
+
+.otm-message {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    text-align: center;
+    font-weight: 500;
+}
+
+.otm-success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.otm-error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.otm-otp-input {
+    font-size: 1em !important;
+    padding: 8px !important;
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto 15px auto;
+    height: auto !important;
+}
+
+/* OTP input row context — override centering when inside flex row */
+.otm-otp-input-row .otm-otp-input {
+    max-width: 100%;
+    margin: 0;
+    flex: 1 1 120px;
+    min-width: 100px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+/* OTP Step layout */
+.otm-otp-step {
+    text-align: center;
+}
+
+.otm-otp-intro-text {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.otm-otp-sent-notice {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.otm-otp-sent-notice strong {
+    color: #1d2327;
+    font-weight: 600;
+}
+
+/* Input + Verify button flex row */
+.otm-otp-input-row {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+/* Resend hint — subtle link style */
+.otm-resend-hint {
+    font-size: 0.85em;
+    color: #999;
+    margin: 4px 0 0;
+}
+
+.otm-resend-link {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #0d6efd;
+    font-size: inherit;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.otm-resend-link:disabled {
+    color: #aaa;
+    cursor: default;
+    text-decoration: none;
+}
+
+#otm-resend-countdown {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-left: 2px;
+}
+
+/* Verified badge — same colours as .otm-success-message */
+.otm-otp-verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    padding: 10px 18px;
+    color: #155724;
+    font-weight: 600;
+    font-size: 0.95em;
+    margin: 0;
+}
+
+.otm-verified-icon {
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+/* OTP responsive */
+@media (max-width: 480px) {
+    .otm-otp-input-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .otm-otp-input-row .otm-otp-input {
+        max-width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .otm-otp-container #otm-verify-otp-button,
+    .otm-otp-container #otm-send-otp-button {
+        width: 100%;
+    }
+}
+
+/* Modal styles (e.g. Fraud Check) */
+.otm-modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.otm-modal-content {
+    background-color: #fff;
+    margin: 8vh auto;
+    padding: 24px;
+    padding-top: 48px;
+    border: 1px solid #b6d4fe;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(13, 110, 253, 0.12), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.otm-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #e8f4fc;
+    color: #0a58ca;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.otm-modal-close:hover {
+    background-color: #cfe2ff;
+    color: #084298;
+}
+
+.otm-modal-close i {
+    font-size: 16px;
+}
+
+#otm-fraud-modal-body {
+    margin-top: 16px;
+}
+
+@media (max-width: 600px) {
+    #otm-fraud-modal .otm-modal-content {
+        margin: 2vh auto;
+        padding: 12px;
+        padding-top: 44px;
+        width: 97%;
+        border-radius: 6px;
+    }
+}
+
+/* Inventory bulk actions dropdown: position like Filter & Export, Apply to right of input */
+.otm-inventory-bulk-actions-wrap.filter-container {
+    position: relative;
+}
+
+#otm-inventory-bulk-modal.otm-inventory-bulk-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 4px;
+    width: 480px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.otm-inventory-bulk-modal-title {
+    margin: 0 0 8px 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.otm-inventory-bulk-modal-intro {
+    margin: 0 0 14px 0;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.otm-inventory-bulk-modal-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.otm-inventory-bulk-card-item {
+    padding: 12px 14px;
+    background: #e7f1ff;
+    border: 1px solid #b6d4fe;
+    border-left: 4px solid var(--otm-btn-bg, #0d6efd);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(13, 110, 253, 0.08);
+}
+
+.otm-inventory-bulk-card-title {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0a58ca;
+}
+
+.otm-inventory-bulk-card-item .filter-option {
+    margin-bottom: 10px;
+}
+
+.otm-inventory-bulk-card-item .filter-option:last-of-type {
+    margin-bottom: 0;
+}
+
+.otm-inventory-bulk-card-item .filter-option label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+/* Apply button to the right of the input */
+.otm-inventory-bulk-card-item .filter-option-input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.otm-inventory-bulk-card-item .filter-option-input-row .otm-inventory-bulk-input {
+    width: 72px;
+}
+
+.otm-inventory-bulk-card-item .filter-option-input-row .filter-dropdown-button {
+    flex-shrink: 0;
+}
+
+/* Stock quantity card: one row labels, one row inputs, one Apply */
+.otm-inventory-bulk-card-item .otm-inventory-bulk-stock-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.otm-inventory-bulk-card-item .otm-inventory-bulk-stock-row:last-of-type {
+    margin-bottom: 0;
+}
+
+.otm-inventory-bulk-card-item .otm-inventory-bulk-stock-label {
+    flex: 1;
+    font-weight: 600;
+    font-size: 13px;
+    min-width: 0;
+    color: #1d2327;
+}
+
+.otm-inventory-bulk-card-item .otm-inventory-bulk-stock-row .otm-inventory-bulk-input {
+    flex: 1;
+    min-width: 0;
+    width: 60px;
+}
+
+.otm-inventory-bulk-card-item .otm-inventory-bulk-stock-row-inputs #otm-inventory-bulk-stock-apply-btn {
+    flex-shrink: 0;
+}
+
+/* P/L accuracy notice */
+.otm-pl-accuracy-notice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #fff8e5;
+    border-left: 4px solid #ffb900;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #1d2327;
+    position: relative;
+}
+
+.otm-pl-accuracy-notice-text {
+    flex: 1;
+}
+
+.otm-pl-accuracy-notice-close {
+    flex: 0 0 auto;
+    background: none;
+    border: none;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    color: #666;
+    padding: 0 2px;
+}
+
+.otm-pl-accuracy-notice-close:hover {
+    color: #1d2327;
+}
+
+/* Tab row: tabs on the left, P/L summary card on the right */
+.otm-tab-summary-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+}
+
+.otm-tab-summary-row .tab-buttons {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* Profit/Loss summary card — inline to the right of tabs */
+#otm-profit-loss-card {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    background: #f0f7ff;
+    border: 1px solid #b6d4fe;
+    border-left: 3px solid var(--otm-btn-bg, #0d6efd);
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(13, 110, 253, 0.08);
+    margin-left: 10px;
+    height: 100%;
+    align-self: center;
+}
+
+#otm-pl-summary-block {
+    font-size: 13px;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+#otm-pl-summary-block>span {
+    display: inline-block;
+    padding: 2px 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#otm-pl-summary-block .otm-pl-summary-inline {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 6px;
+}
+
+#otm-pl-summary-block .otm-pl-summary-inline .otm-pl-summary-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    border: 1px solid rgba(182, 212, 254, 0.6);
+    white-space: nowrap;
+}
+
+#otm-pl-summary-block .otm-pl-summary-inline .otm-pl-summary-item strong {
+    font-weight: 600;
+    font-size: 12px;
+    color: #495057;
+}
+
+#otm-pl-summary-block .otm-pl-summary-inline .otm-pl-summary-item span {
+    font-weight: 700;
+    font-size: 14px;
+    color: #0d6efd;
+}
+
+#otm-pl-summary-block .otm-pl-summary-inline .otm-pl-summary-item:last-child span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#otm-pl-summary-block #otm-pl-net-value.otm-pl-net-positive {
+    color: #198754;
+}
+
+#otm-pl-summary-block #otm-pl-net-value.otm-pl-net-negative {
+    color: #dc3545;
+}
+
+#otm-pl-summary-block #otm-pl-ad-cost-input {
+    width: 80px;
+    padding: 4px 8px;
+    border: 1px solid #b6d4fe;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fff;
+}
+
+#otm-pl-summary-block #otm-pl-ad-cost-input:focus {
+    outline: none;
+    border-color: var(--otm-btn-bg, #0d6efd);
+    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.2);
+}
+
+#otm-pl-summary-block #otm-pl-ad-cost-input::placeholder {
+    color: #adb5bd;
+}
+
+#otm-pl-summary-block .otm-pl-actions-inline {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+#otm-pl-summary-block .otm-pl-actions-inline span {
+    font-size: 13px;
+    color: #495057;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+#otm-pl-summary-block .otm-pl-action-btn {
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--otm-btn-text, #fff);
+    background-color: var(--otm-btn-bg, #0d6efd);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#otm-pl-summary-block .otm-pl-action-btn:hover {
+    background-color: var(--otm-btn-hover-bg, #0b5ed7);
+    box-shadow: 0 2px 4px rgba(13, 110, 253, 0.3);
+}
+
+@media (max-width: 767px) {
+    .otm-tab-summary-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #otm-profit-loss-card {
+        margin-left: 0;
+        margin-top: 8px;
+        flex-wrap: wrap;
+    }
+
+    #otm-pl-summary-block .otm-pl-summary-inline {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* Mobile responsive toolbar */
+.otm-btn-short {
+    display: none;
+}
+
+#otm-more-btn {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .otm-btn-long {
+        display: none;
+    }
+
+    .otm-btn-short {
+        display: inline;
+    }
+
+    #otm-order-summary-btn {
+        order: 1;
+    }
+
+    .search-container>.add-new-order-container {
+        order: 2;
+        flex: 0 0 auto;
+        min-width: unset;
+    }
+
+    .search-container>.filter-container {
+        order: 3;
+        flex: 0 0 auto;
+        min-width: unset;
+    }
+
+    #otm-more-btn {
+        display: inline-flex;
+        order: 4;
+    }
+
+    .sms-container,
+    #bulk-sms-container,
+    #otm-profit-loss-toggle-btn,
+    #otm-inventory-button-wrap {
+        display: none;
+        order: 10;
+    }
+
+    .search-container.otm-more-open .sms-container {
+        display: flex;
+    }
+
+    .search-container.otm-more-open #bulk-sms-container {
+        display: flex;
+    }
+
+    .search-container.otm-more-open #otm-profit-loss-toggle-btn {
+        display: inline-flex;
+    }
+
+    .search-container.otm-more-open #otm-inventory-button-wrap {
+        display: flex;
+    }
+}
+
+/* Order Summary modal specific styles */
+#otm-order-summary-modal .otm-modal-content {
+    max-width: 480px;
+}
+
+.otm-summary-title {
+    margin: 0 0 16px 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1e3a5f;
+}
+
+.otm-summary-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.otm-summary-filter-row label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1d2327;
+    white-space: nowrap;
+}
+
+.otm-summary-filter-row select {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #b6d4fe;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #1d2327;
+}
+
+.otm-summary-filter-row select:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 1px #0d6efd;
+}
+
+.otm-summary-total {
+    font-size: 15px;
+    color: #1e3a5f;
+    background: #e7f1ff;
+    border: 1px solid #b6d4fe;
+    border-left: 4px solid #0d6efd;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+}
+
+.otm-summary-total strong {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.otm-summary-product-wrap {
+    max-height: 340px;
+    overflow-y: auto;
+    border: 1px solid #b6d4fe;
+    border-radius: 6px;
+}
+
+.otm-summary-product-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.otm-summary-product-table thead th {
+    background: #0d6efd;
+    color: #fff;
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.otm-summary-product-table thead th:last-child {
+    text-align: center;
+    width: 60px;
+}
+
+.otm-summary-product-table thead th:first-child {
+    width: 40px;
+    text-align: center;
+}
+
+.otm-summary-product-table tbody tr:nth-child(even) {
+    background: #f0f7ff;
+}
+
+.otm-summary-product-table tbody tr:hover {
+    background: #e7f1ff;
+}
+
+.otm-summary-product-table tbody td {
+    padding: 7px 12px;
+    border-bottom: 1px solid #e2ecff;
+    color: #1d2327;
+}
+
+.otm-summary-product-table tbody td:first-child {
+    text-align: center;
+    color: #6c757d;
+    font-size: 13px;
+}
+
+.otm-summary-product-table tbody td:last-child {
+    text-align: center;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.otm-summary-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 28px;
+    color: #0d6efd;
+    font-size: 14px;
+}
+
+.otm-spin {
+    display: inline-block;
+    animation: otm-rotate 1s linear infinite;
+}
+
+/* Action-button icons (save, print, paper-plane, sync, redo) */
+.update-status-button-icon .otm-svg-icon,
+.button .otm-svg-icon {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+/* Modal close button icon */
+.otm-modal-close .otm-svg-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+/* Toolbar / filter button icons */
+.filter-dropdown-button .otm-svg-icon {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+@keyframes otm-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.otm-summary-empty {
+    text-align: center;
+    padding: 24px;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.otm-summary-error {
+    text-align: center;
+    padding: 24px;
+    color: #dc3545;
+    font-size: 14px;
+}
+
+/* =========================================================================
+ * Frontend Canvas Design Improvements
+ * ========================================================================= */
+
+/* Canvas Wrapper Reset & Foundation */
+#wotm-canvas-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1f2328;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#wotm-canvas-wrapper *,
+#wotm-canvas-wrapper *::before,
+#wotm-canvas-wrapper *::after {
+    box-sizing: border-box;
+}
+
+/* Premium App Container Styling */
+#wotm-canvas-wrapper #otm-app-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+    padding: 24px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Update Button Paddings for a more modern feel globally inside app */
+#otm-app-container button,
+#otm-app-container .button,
+#otm-app-container .otm-inventory-button-main,
+#otm-app-container .otm-inventory-button-bell,
+#otm-app-container #apply-filters,
+#otm-app-container .filter-dropdown-button,
+#otm-app-container .otm-zone-parcel-steadfast-btn {
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+}
+
+/* Inputs and Selects styling */
+#otm-app-container input[type="text"],
+#otm-app-container input[type="search"],
+#otm-app-container input[type="email"],
+#otm-app-container input[type="password"],
+#otm-app-container input[type="number"],
+#otm-app-container select,
+#otm-app-container textarea {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #d0d7de;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#otm-app-container input:focus,
+#otm-app-container select:focus,
+#otm-app-container textarea:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #wotm-canvas-wrapper {
+        padding: 0px;
+    }
+
+    #wotm-canvas-wrapper #otm-app-container {
+        padding: 16px;
+        border-radius: 8px;
+    }
+}
+
+/* Differentiate the 'Sent' (disabled) button from 'Send' */
+#otm-app-container button.button[disabled]:not(.otm-resend-courier-btn) {
+    background-color: #6c757d !important;
+    /* Muted gray for inactive state */
+    color: #ffffff !important;
+    cursor: default !important;
+    opacity: 0.85;
+    box-shadow: none !important;
+    pointer-events: none;
+    /* Ensure it is not clickable */
+}
+
+/* Ensure the active 'Send to Courier' button stands out clearly */
+#otm-app-container .otm-send-to-courier-btn {
+    background-color: #0d6efd !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+}
+
+#otm-app-container .otm-send-to-courier-btn:hover {
+    background-color: #0b5ed7 !important;
+    box-shadow: 0 2px 4px rgba(13, 110, 253, 0.3) !important;
+}
+
+/* Adjust textarea height and width inside all modals (Add New Order, Send SMS, Bulk SMS) */
+.otm-modal textarea,
+#otm-app-container .otm-modal textarea {
+    width: 100% !important;
+    height: 80px !important;
+    /* Reduced height */
+    min-height: 60px !important;
+    box-sizing: border-box !important;
+    resize: vertical;
+    /* Allow user to drag and resize vertically if they need more space */
+    margin-top: 8px;
+}
+
+/* FIX: The textareas are actually inside .filter-dropdown popovers, not just modals. */
+#otm-app-container .filter-dropdown textarea,
+#new-order-order-comments,
+#new-order-invoice-note,
+#sms-message,
+#bulk-sms-message {
+    width: 100% !important;
+    height: 80px !important;
+    min-height: 60px !important;
+    box-sizing: border-box !important;
+    resize: vertical;
+    margin-top: 8px;
+}
